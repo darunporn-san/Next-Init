@@ -3,9 +3,10 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { Button, Menu, Layout } from "antd";
-
+import { Button, Menu, Layout, Dropdown } from "antd";
+import { EllipsisOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
+import DropdownManage from "./dropdown-manage";
 
 const { Header } = Layout;
 
@@ -39,6 +40,7 @@ const HeaderContainer: NextPage<Props> = () => {
         height: 70,
         padding: "0px 9px",
         display: "flex",
+        borderRadius: "10px",
       }}
     >
       <div>Logo</div>
@@ -51,16 +53,19 @@ const HeaderContainer: NextPage<Props> = () => {
         onClick={onClick}
       />
 
-      <div className="mr-6">
+      {/* <div className="mr-6">
         <Link href={route} locale={otherLocale}>
           {t("switchLocale", { locale: otherLocale })}
         </Link>
-      </div>
+      </div> */}
       <div className="flex items-center">
         <p className="mr-2">test@test.com</p>
-        <Button type="primary" danger size="small">
+        <Dropdown placement="bottomRight" dropdownRender={() => <DropdownManage/>}>
+          <EllipsisOutlined rotate={90} />
+        </Dropdown>
+        {/* <Button type="primary" danger size="small">
           Logout
-        </Button>
+        </Button> */}
       </div>
     </Header>
   );

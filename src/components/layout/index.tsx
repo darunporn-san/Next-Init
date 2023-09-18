@@ -10,12 +10,12 @@ export const siteTitle = "Next.js Sample Website";
 
 const LayoutContainer = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Layout style={{ minHeight: "100vh", background: "#f7f7f7" }}>
+    <Layout style={{ minHeight: "100vh", background: "#f7f7f7" }} className="p-4">
       <HeaderContainer />
       <Layout className="py-3 gap-3">
         <Sidebar />
         <Layout>
-          <main className="bg-white h-full">{children}</main>
+          <main className="h-full">{children}</main>
         </Layout>
       </Layout>
     </Layout>

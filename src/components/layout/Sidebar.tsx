@@ -41,6 +41,7 @@ const Sidebar: NextPage<Props> = () => {
       breakpoint="lg"
       collapsible
       collapsed={collapsed}
+      
       onCollapse={(value) => setCollapsed(value)}
       className="bg-white"
     >
@@ -48,7 +49,7 @@ const Sidebar: NextPage<Props> = () => {
         mode="inline"
         defaultSelectedKeys={["1"]}
         defaultOpenKeys={["sub1"]}
-        style={{ height: "100%", borderRight: 0 }}
+        style={{ height: "100%", borderRight: 0 ,borderRadius:'10px'}}
         items={items2}
       />
     </Sider>

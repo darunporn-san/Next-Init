@@ -1,12 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import "./fonts.css";
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -17,6 +19,8 @@
 }
 
 body {
+  font-family: "Kanit", sans-serif !important;
+
   color: #555658;
   background: linear-gradient(
       to bottom,
@@ -24,4 +28,14 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+.ant-layout-sider-trigger{
+  display: none;
+}
+.ant-layout .ant-layout-sider-has-trigger{
+  padding: 0;
+}
+
+.ant-menu,.ant-layout-sider{
+  border-radius: 10px;
 }

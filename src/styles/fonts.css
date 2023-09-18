@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "Kanit";
+  src: url("./../assets/Kanit/Kanit-Light.ttf") format(" truetype");
+    font-display: block;
+    font-weight: 200;
+  }
+  
+  @font-face {
+    font-family: "Kanit";
+  src: url("./../assets/Kanit/Kanit-Light.ttf") format("truetype");
+    font-display: block;
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: "Kanit";
+  src: url("./../assets/Kanit/Kanit-Regular.ttf") format("truetype");
+    font-display: block;
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: "Kanit";
+  src: url("./../assets/Kanit/Kanit-Medium.ttf") format("truetype");
+    font-display: block;
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-family: "Kanit";
+  src: url("./../assets/Kanit/Kanit-SemiBold.ttf") format("truetype");
+    font-display: block;
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-family: "Kanit";
+  src: url("./../assets/Kanit/Kanit-Bold.ttf") format("truetype");
+    font-display: block;
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: "Kanit";
+  src: url("./../assets/Kanit/Kanit-ExtraBold.ttf") format("truetype");
+    font-display: block;
+    font-weight: 800;
+  }
+  
+  @font-face {
+    font-family: "Kanit";
+  src: url("./../assets/Kanit/Kanit-Black.ttf") format("truetype");
+    font-display: block;
+    font-weight: 900;
+  }
+  
