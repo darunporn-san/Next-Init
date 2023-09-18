@@ -1,0 +1,33 @@
+{
+  "Dashboard": {
+    "title": "แดชบอร์ด",
+    "lastUpdated": "This example was updated {lastUpdatedRelative} ({lastUpdated, date, short})."
+  },
+  "Index": {
+    "title": "หน้าแรก",
+    "description": "<p>Only the minimum of <code>{locale}</code> messages are loaded to render this page.</p><p>These namespaces are available:</p>"
+  },
+  "HeaderContainer": {
+    "index": "หน้าแรก",
+    "about": "เกี่ยวกับเรา",
+    "pageTitle": "ทดสอบ",
+    "switchLocale": "Switch to {locale, select, de {German} en {English} other {Unknown}}"
+  },
+  "NotFound": {
+    "title": "Sorry, this page could not be found."
+  },
+  "PageLayout": {
+    "pageTitle": "next-intl"
+  },
+  "StrictTypes": {
+    "nested": {
+      "hello": "Hello",
+      "another": {
+        "level": "Level"
+      }
+    }
+  },
+  "LocaleSwitcher": {
+    "switchLocale": "English"
+  }
+}
