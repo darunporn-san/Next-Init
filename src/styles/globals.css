@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --secondary:#555658;
 }
 
 
@@ -39,3 +40,16 @@ body {
 .ant-menu,.ant-layout-sider{
   border-radius: 10px;
 }
+
+.ant-layout-sider-children .ant-menu-item-selected .ant-menu-item-icon ,.ant-menu-item-selected .ant-menu-title-content{
+  color: white !important
+}
+.ant-menu-item-selected {
+  background-color: #093B5C !important;
+  color:white !important
+
+}
+.ant-menu-title-content,.ant-menu-item-icon{
+  color:  var(--secondary)
+}
+

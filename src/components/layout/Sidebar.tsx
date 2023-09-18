@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { Layout, Menu } from "antd";
 import Image from "next/image";
+import { SidebarMenu } from "./sidebar-config";
 
 interface Props {
   // menu: string;
@@ -41,17 +42,28 @@ const Sidebar: NextPage<Props> = () => {
       breakpoint="lg"
       collapsible
       collapsed={collapsed}
-      
       onCollapse={(value) => setCollapsed(value)}
       className="bg-white"
     >
-      <Menu
-        mode="inline"
-        defaultSelectedKeys={["1"]}
-        defaultOpenKeys={["sub1"]}
-        style={{ height: "100%", borderRight: 0 ,borderRadius:'10px'}}
-        items={items2}
-      />
+      {SidebarMenu?.map((menu: any, i) => {
+        return (
+          <div key={menu.key}>
+            {menu?.title !== "" && (
+              <div className="mx-1">
+                <p className="text-gray-600 text-start px-2">{menu.title}</p>
+                <hr className="pt-[1px] bg-secondary my-1"/>
+              </div>
+            )} 
+            <Menu
+              onClick={({ key }) => {
+                window.scrollTo(0, 0);
+              }}
+              mode="inline"
+              items={menu.menu}
+            />
+          </div>
+        );
+      })}
     </Sider>
   );
 };

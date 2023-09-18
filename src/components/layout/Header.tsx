@@ -1,12 +1,13 @@
 import { NextPage, GetStaticPropsContext } from "next";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
-import { Button, Menu, Layout, Dropdown } from "antd";
+import { Menu, Layout, Dropdown, Avatar } from "antd";
 import { EllipsisOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import DropdownManage from "./dropdown-manage";
+import { UserOutlined } from "@ant-design/icons";
+import Image from "next/image";
+import Logo from "@/assets/image/OBCL.svg"
 
 const { Header } = Layout;
 
@@ -40,18 +41,25 @@ const HeaderContainer: NextPage<Props> = () => {
         height: 70,
         padding: "0px 9px",
         display: "flex",
+        justifyContent:'space-between',
         borderRadius: "10px",
       }}
     >
-      <div>Logo</div>
+      <Image
+              width={180}
+              src={Logo}
+              alt=""
+              height={100}
+              className="my-auto"
+            />
 
-      <Menu
+      {/* <Menu
         mode="horizontal"
         defaultSelectedKeys={["2"]}
         items={menuList}
         className="w-full"
         onClick={onClick}
-      />
+      /> */}
 
       {/* <div className="mr-6">
         <Link href={route} locale={otherLocale}>
@@ -59,13 +67,15 @@ const HeaderContainer: NextPage<Props> = () => {
         </Link>
       </div> */}
       <div className="flex items-center">
-        <p className="mr-2">test@test.com</p>
-        <Dropdown placement="bottomRight" dropdownRender={() => <DropdownManage/>}>
+        <div className="mr-2">test@test.com</div>
+        <Avatar icon={<UserOutlined />} className="mr-5" />
+        <Dropdown
+          placement="bottomRight"
+          
+          dropdownRender={() => <DropdownManage />}
+        >
           <EllipsisOutlined rotate={90} />
         </Dropdown>
-        {/* <Button type="primary" danger size="small">
-          Logout
-        </Button> */}
       </div>
     </Header>
   );

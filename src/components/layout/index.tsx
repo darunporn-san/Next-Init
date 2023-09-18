@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Layout } from "antd";
 import { GetServerSideProps } from "next";
 import HeaderContainer from "./Header";
-import Sidebar from "./Sidebar";
+import Sidebar from "./sidebar";
 
 const { Header, Content, Sider } = Layout;
 
